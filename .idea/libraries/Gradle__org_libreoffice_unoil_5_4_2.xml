@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.libreoffice:unoil:5.4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.libreoffice/unoil/5.4.2/668ec722252b9b922d2aa1aefd27ea998fbf4ada/unoil-5.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.libreoffice/unoil/5.4.2/df7011081df0b232a0b9ab98167d8110ff932498/unoil-5.4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

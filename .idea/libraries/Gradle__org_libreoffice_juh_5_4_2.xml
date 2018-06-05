@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.libreoffice:juh:5.4.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.libreoffice/juh/5.4.2/d646e7c4f41b3d4a59f4aeaa1afd6ac8a7f7ed55/juh-5.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.libreoffice/juh/5.4.2/92fb45a2dc83408d4d883915bc4ac5a556df3c22/juh-5.4.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
