@@ -22,8 +22,8 @@ public class ConverterTest {
 
     @Test
     public void fileTest1() throws DataFormatException, OfficeException {
-        File resFile = new File("E:\\Users\\大型转码文件测试-300页测试-demo用.docx");
-        File pdfFile = new File("E:\\Users\\libreOffice\\2codeHtml-page.html");
-        MyOpenOfficeConverter.toHtmlFileV2(resFile);
+        File resFile = new File("E:\\Users\\WordFiles\\test2.docx");
+        File pdfFile = new File("E:\\Users\\2Html\\testHtml.html");
+        MyOpenOfficeConverter.office2Pdf(resFile,pdfFile);
     }
 }

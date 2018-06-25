@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--monitorInterval="1800"，指log4j2每隔1800秒（半小时），自动监控该配置文件是否有变化，如果变化，则自动根据文件内容重新配置-->
+<Configuration status="warn" monitorInterval="1800" strict="true" schema="Log4J-V2.6.2.xsd">
+    <!--定义下面的引用名-->
+    <properties>
+        <!--配置日志文件输出目录-->
+        <property name="LOG_HOME">F:/myIdeaWorkSpace/OpenOfficeDemo2/OpenOfficeDemo/logs</property>
+        <!--输出文件名称-->
+        <property name="FILE_NAME_DEBUG">OpenOfficeDemo-debug</property>
+        <property name="FILE_NAME_INFO">OpenOfficeDemo-info</property>
+        <property name="FILE_NAME_WARN">OpenOfficeDemo-warn</property>
+        <property name="FILE_NAME_ERROR">OpenOfficeDemo-error</property>
+        <!--日志输出级别-->
+        <property name="LOG_LEVEL">debug</property>
+    </properties>
+    <Appenders>
+        <!--这个输出控制台的配置-->
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <!--控制台只输出level及以上级别的信息(onMatch)，其他的直接拒绝(onMismatch) -->
+            <ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!--输出日志的格式-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"/>
+        </Console>
+        <!--DEBUG-->
+        <!--RollingRandomAccessFile即表示以文件方式记录，注意一下filePattern的设置，它与SizeBasedTriggeringPolicy（表示单个文件最大多少容量）结合在一起，非常有用，
+        以这段配置为例，当单个文件达到10M后，会自动将以前的内容，先创建类似 2014-09（年-月）的目录，然后按"xxx-年-月-日-序号"命名，打成压缩包-->
+        <RollingRandomAccessFile name="service_debug_appender" fileName="${LOG_HOME}/${FILE_NAME_DEBUG}.log"
+                                 filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME_DEBUG}-%d{yyyy-MM-dd}-%i.debug.gz">
+            <!--%d{yyyy-MM-dd HH:mm:ss, SSS} : 日志生产时间 - %p : 日志输出格式 - %c : logger的名称 - %m : 日志内容，即logger.info("message")
+            - %n : 换行符 - %C : Java类名 - %L : 日志输出所在行数 - %M : 日志输出所在方法名 - hostName : 本地机器名 - hostAddress : 本地ip地址-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M -- %msg%xEx%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!--DefaultRolloverStrategy max="20"表示压缩包，最多保留20个-->
+            <DefaultRolloverStrategy max="1000"/>
+            <Filters>
+                <ThresholdFilter level="info" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="NEUTRAL"/>
+            </Filters>
+        </RollingRandomAccessFile>
+        <!--INFO-->
+        <RollingRandomAccessFile name="service_info_appender" fileName="${LOG_HOME}/${FILE_NAME_INFO}.log"
+                                 filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME_INFO}-%d{yyyy-MM-dd}-%i.info.gz">
+            <!--%d{yyyy-MM-dd HH:mm:ss, SSS} : 日志生产时间 - %p : 日志输出格式 - %c : logger的名称 - %m : 日志内容，即logger.info("message")
+            - %n : 换行符 - %C : Java类名 - %L : 日志输出所在行数 - %M : 日志输出所在方法名 - hostName : 本地机器名 - hostAddress : 本地ip地址-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M -- %msg%xEx%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!--DefaultRolloverStrategy max="20"表示压缩包，最多保留20个-->
+            <DefaultRolloverStrategy max="1000"/>
+            <Filters>
+                <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingRandomAccessFile>
+        <!--WARN-->
+        <RollingRandomAccessFile name="service_warn_appender" fileName="${LOG_HOME}/${FILE_NAME_WARN}.log"
+                                 filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME_WARN}-%d{yyyy-MM-dd}-%i.warn.gz">
+            <!--%d{yyyy-MM-dd HH:mm:ss, SSS} : 日志生产时间 - %p : 日志输出格式 - %c : logger的名称 - %m : 日志内容，即logger.info("message")
+            - %n : 换行符 - %C : Java类名 - %L : 日志输出所在行数 - %M : 日志输出所在方法名 - hostName : 本地机器名 - hostAddress : 本地ip地址-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M -- %msg%xEx%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!--DefaultRolloverStrategy max="20"表示压缩包，最多保留20个-->
+            <DefaultRolloverStrategy max="1000"/>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="warn" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingRandomAccessFile>
+        <!--ERROR-->
+        <RollingRandomAccessFile name="service_error_appender" fileName="${LOG_HOME}/${FILE_NAME_ERROR}.log"
+                                 filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME_ERROR}-%d{yyyy-MM-dd}-%i.error.gz">
+            <!--%d{yyyy-MM-dd HH:mm:ss, SSS} : 日志生产时间 - %p : 日志输出格式 - %c : logger的名称 - %m : 日志内容，即logger.info("message")
+            - %n : 换行符 - %C : Java类名 - %L : 日志输出所在行数 - %M : 日志输出所在方法名 - hostName : 本地机器名 - hostAddress : 本地ip地址-->
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M -- %msg%xEx%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <!--DefaultRolloverStrategy max="20"表示压缩包，最多保留20个-->
+            <DefaultRolloverStrategy max="1000"/>
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingRandomAccessFile>
+    </Appenders>
+    <Loggers>
+        <!--配置日志的根节点-->
+        <Root level="${LOG_LEVEL}" includeLocation="true">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="service_debug_appender"/>
+            <appender-ref ref="service_info_appender"/>
+            <appender-ref ref="service_warn_appender"/>
+            <appender-ref ref="service_error_appender"/>
+        </Root>
+    </Loggers>
+</Configuration>

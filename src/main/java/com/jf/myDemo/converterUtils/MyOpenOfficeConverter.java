@@ -1,6 +1,7 @@
 package com.jf.myDemo.converterUtils;
 
 import com.jf.myDemo.converfileter.PageCounterFilter;
+import org.jodconverter.JodConverter;
 import org.jodconverter.LocalConverter;
 import org.jodconverter.filter.text.PageSelectorFilter;
 import org.jodconverter.office.*;
@@ -19,7 +20,8 @@ import java.util.zip.DataFormatException;
  */
 public class MyOpenOfficeConverter {
 
-    private static String officeHome = "D:/OpenOffice/of4";
+//    private static String officeHome = "D:/OpenOffice/of4";
+    private static String officeHome = "D:\\Software\\OpenOffice\\OpenOffice4.1.5_Install";
     //    将转码工具变成LibreOffice，方法沿用原来的---》并不能沿用
 //    private static String officeHome = "D:/Software/LibreOffice";
 
@@ -29,80 +31,21 @@ public class MyOpenOfficeConverter {
         // The default port is 2002. Note that when an office manager
         // is installed, it will be the one used by default when
         // a converter is created.
+        OfficeManager officeManager = LocalOfficeManager.builder().officeHome(officeHome).install().build();
         try {
             /*创建一个openOfficeManager对象*/
             /*方法①*/
-            //LocalOfficeManager.builder().portNumbers(8100).officeHome(officeHome).install().build().start();
-            /*方法②*/
-            OfficeManager officeManager = LocalOfficeManager.builder().officeHome(officeHome).install().build();
             officeManager.start();
-            /*搁gitHub官网上整下来的*/
             // Convert
-           /* JodConverter
+            JodConverter
                     .convert(inputFile)
                     .to(pdfFile)
-                    .execute();*/
-
-            /*分页转换-1*/
-            /*Map<String, Object> filterData = new HashMap<String,Object>();
-            filterData.put("PageRange", "3");
-            Map<String, Object> customProperties = new HashMap<String,Object>();
-            customProperties.put("FilterData", filterData);
-            LocalConverter
-                    .builder()
-                    .storeProperties(customProperties)
-                    .build()
-                    .convert(inputFile)
-                    .to(pdfFile)
-                    .execute();*/
-            /*分页转换-2*/
-            /**
-             * @author: wjie
-             * @date: 2018/2/28 0028 14:53
-            测试结果：没看到有什么不一样嘚。。。。mmp
-             */
-            PageSelectorFilter selectorFilter;
-//            System.out.println("由pageCounter获取的到页值数为："+pageCount);
-            PageCounterFilter pageCounterFilter = new PageCounterFilter();
-            //将辅助文件放在内存中，用后即删
-            File countFile = new File("temp.html");
-            /*选择要转换的 页码范围*/
-            LocalConverter
-                    .builder()
-                    .filterChain(pageCounterFilter)
-                    .build()
-                    .convert(inputFile)
-                    .to(countFile)
                     .execute();
-            if (countFile.exists()) {
-                countFile.delete();
-            }
-            for (int i = 1; i <= pageCounterFilter.getPageCount(); i++) {
-                /*指定转换的页数*/
-                selectorFilter = new PageSelectorFilter(i);
-                File resultFile = new File("E:\\Users\\openOffice\\2Html\\2codeHtml-page-" + i + ".html");
-                /*选择要转换的 页码范围*/
-                LocalConverter
-                        .builder()
-//                        .filterChain(pageCounterFilter,selectorFilter)
-                        //未添加pageCountFilter的情况，测试结果--》
-                        .filterChain(selectorFilter)
-                        .build()
-                        .convert(inputFile)
-                        .to(resultFile)
-                        .execute();
-            }
-//            System.out.println("由pageCounter获取的到页值数为："+pageCounterFilter.getPageCount());
-            officeManager.stop();
         } catch (OfficeException e) {
             e.printStackTrace();
+        }finally {
+            LocalOfficeUtils.stopQuietly(officeManager);
         }
-       /* finally {
-            // Stop the office process
-            if(officeManager != null){
-                LocalOfficeUtils.stopQuietly(officeManager);
-            }
-        }*/
     }
 
     public static void toHtmlFile(File convertFile) throws OfficeException {

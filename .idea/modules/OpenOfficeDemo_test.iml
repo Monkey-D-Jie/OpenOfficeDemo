@@ -10,17 +10,24 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="OpenOfficeDemo_main" />
-    <orderEntry type="library" name="Gradle: org.jodconverter:jodconverter-local:4.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: junit:junit:4.11" level="project" />
-    <orderEntry type="library" name="Gradle: org.jodconverter:jodconverter-core:4.1.0" level="project" />
-    <orderEntry type="library" name="Gradle: org.libreoffice:juh:5.4.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.libreoffice:jurt:5.4.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.libreoffice:ridl:5.4.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.libreoffice:unoil:5.4.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodconverter:jodconverter-local:4.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.6.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.6.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-web:2.6.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.6.2" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.7.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.7.3" level="project" />
+    <orderEntry type="library" name="Gradle: junit:junit:4.11" level="project" />
+    <orderEntry type="library" name="Gradle: org.jodconverter:jodconverter-core:4.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.openoffice:juh:4.1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.openoffice:jurt:4.1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.openoffice:ridl:4.1.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.openoffice:unoil:4.1.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.7.0" level="project" />
     <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
-    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.5" level="project" />
-    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.6" level="project" />
+    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.6" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.7" level="project" />
     <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.2" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="OpenOfficeDemo_main" />

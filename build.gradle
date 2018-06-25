@@ -6,7 +6,15 @@ apply plugin: 'war'
 
 sourceCompatibility = 1.5
 ext {
-    jodconverterVersion = '4.1.0'
+//    jodconverterVersion = '4.1.0'
+    jodconverterVersion = '4.2.0'
+    /*log4j2日志包*/
+    log4j2Version = '2.6.2'
+    /*slf4j日志转换包*/
+    slf4jVersion = '1.7.25'
+//    jodconverterVersion2 = '3.0-beta-3'
+    /*jacksonVersion 数据转换成json的包*/
+    jacksonVersion = '2.7.3'
 }
 repositories {
     mavenCentral()
@@ -14,5 +22,21 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile "org.jodconverter:jodconverter-local:$jodconverterVersion"
+    compile(
+            "org.jodconverter:jodconverter-local:$jodconverterVersion",
+            "org.apache.logging.log4j:log4j-api:$log4j2Version",
+            "org.apache.logging.log4j:log4j-core:$log4j2Version",
+            "org.apache.logging.log4j:log4j-web:$log4j2Version",
+            "org.apache.logging.log4j:log4j-slf4j-impl:$log4j2Version",
+            "org.slf4j:slf4j-api:$slf4jVersion",
+            // https://mvnrepository.com/artifact/org.artofsolving.jodconverter/jodconverter-core
+//            "org.artofsolving.jodconverter:jodconverter-core:$jodconverterVersion2"
+            //加载本地的jar包
+//            fileTree(dir:'libs',include:['*.jar']),
+            // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+            "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
+            // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+
+    )
 }
