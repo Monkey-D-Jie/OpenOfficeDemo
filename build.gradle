@@ -32,7 +32,7 @@ dependencies {
             // https://mvnrepository.com/artifact/org.artofsolving.jodconverter/jodconverter-core
 //            "org.artofsolving.jodconverter:jodconverter-core:$jodconverterVersion2"
             //加载本地的jar包
-//            fileTree(dir:'libs',include:['*.jar']),
+            fileTree(dir:'libs',include:['*.jar']),
             // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
             // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind

@@ -1,5 +1,6 @@
 package com.jf.myDemo.converterUtils;
 
+import com.jf.myDemo.common.utilities.txt.WriteTxtKit;
 import com.jf.myDemo.converfileter.PageCounterFilter;
 import org.jodconverter.JodConverter;
 import org.jodconverter.LocalConverter;
@@ -26,7 +27,7 @@ public class MyOpenOfficeConverter {
 //    private static String officeHome = "D:/Software/LibreOffice";
 
 
-    public static void office2Pdf(File inputFile, File pdfFile) throws DataFormatException {
+    public static void convertFile(File inputFile, File pdfFile) throws DataFormatException {
         // Create an office manager using the default configuration.
         // The default port is 2002. Note that when an office manager
         // is installed, it will be the one used by default when
@@ -36,6 +37,15 @@ public class MyOpenOfficeConverter {
             /*创建一个openOfficeManager对象*/
             /*方法①*/
             officeManager.start();
+            String fileName = inputFile.getName();
+            if (fileName.substring(fileName.lastIndexOf(".")).equalsIgnoreCase(".txt")) {
+                try {
+                    String txtContent = WriteTxtKit.getFileContentFromCharset(inputFile,"GBK");
+                    WriteTxtKit.saveFile2Charset(inputFile,"UTF-8",txtContent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
             // Convert
             JodConverter
                     .convert(inputFile)

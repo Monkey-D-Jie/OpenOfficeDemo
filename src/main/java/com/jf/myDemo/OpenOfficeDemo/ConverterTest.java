@@ -1,6 +1,7 @@
 package com.jf.myDemo.OpenOfficeDemo;
 
 import com.jf.myDemo.converterUtils.MyOpenOfficeConverter;
+import com.jf.myDemo.converterUtils.Pdf2Html.Pdf2htmlEXUtil;
 import org.jodconverter.office.OfficeException;
 import org.junit.Test;
 
@@ -20,10 +21,23 @@ import java.util.zip.DataFormatException;
 
 public class ConverterTest {
 
+//    private String libreHtmlDir = "E:\\Users\\libreOffice\\2Html\\";
+    private String libreHtmlDir = "E:\\Users\\libreOffice\\2Html";
+    //    private String openHtmlDir = "E:\\Users\\openOffice\\2Html\\";
+    private String openHtmlDir = "E:\\Users\\openOffice\\2Html";
+    private String librePdfDir = "E:\\Users\\libreOffice\\2Pdf\\";
+    private String openPdfDir = "E:\\Users\\openOffice\\2Pdf\\";
+
+
+
     @Test
-    public void fileTest1() throws DataFormatException, OfficeException {
-        File resFile = new File("E:\\Users\\WordFiles\\test2.docx");
-        File pdfFile = new File("E:\\Users\\2Html\\testHtml.html");
-        MyOpenOfficeConverter.office2Pdf(resFile,pdfFile);
+    public void fileTest() throws DataFormatException, OfficeException {
+        File resFile = new File("E:\\Users\\WordFiles\\test-docx.docx");
+        File pdfFile = new File(libreHtmlDir+"testDocx-pdf.pdf");
+//        File pdfFile = new File(openHtmlDir+"testDocx-pdf.pdf");
+
+        MyOpenOfficeConverter.convertFile(resFile,pdfFile);
+//        MyLibreOfficeConverter.convertFile(resFile,pdfFile);
+        Pdf2htmlEXUtil.pdf2html("D:\\Temp\\pdf2html\\pdf2htmlEX.exe",openHtmlDir+"testDocx-pdf.pdf",libreHtmlDir,"testDocx-pdf.html");
     }
 }

@@ -17,23 +17,24 @@
           <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.jodconverter:jodconverter-local:4.2.0" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.6.2" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-core:2.6.2" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-web:2.6.2" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.6.2" />
           <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.7.3" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.7.3" />
+          <element id="library" level="project" name="Gradle: org.jodconverter:jodconverter-core:4.2.0" />
+          <element id="library" level="project" name="Gradle: org.openoffice:juh:4.1.2" />
+          <element id="library" level="project" name="Gradle: org.openoffice:jurt:4.1.2" />
+          <element id="library" level="project" name="Gradle: org.openoffice:ridl:4.1.2" />
+          <element id="library" level="project" name="Gradle: org.openoffice:unoil:4.1.2" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.7.0" />
+          <element id="library" level="project" name="Gradle: commons-io:commons-io:2.6" />
+          <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.7" />
           <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.2" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jodconverter/jodconverter-local/4.2.0/cf42d9cb21372c0a7b6ecf2ab93d565d6fed4deb/jodconverter-local-4.2.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.6.2/bd1b74a5d170686362091c7cf596bbc3adf5c09b/log4j-api-2.6.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.6.2/a91369f655eb1639c6aece5c5eb5108db18306/log4j-core-2.6.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-web/2.6.2/99fc279cdf020a4b75a4f94d996646b86da4fd7b/log4j-web-2.6.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j-impl/2.6.2/71d6c56133e0548e07434add048d7a7a2db53512/log4j-slf4j-impl-2.6.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.7.3/1499b854ae9f370409792db5af1b552dc7d9682f/jackson-core-2.7.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.7.3/f12e6cd05cbaecd74d16e685d45b627732939e42/jackson-databind-2.7.3.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jodconverter/jodconverter-core/4.2.0/3a93b94208034bbdec1131f6f71f45b37cf34bee/jodconverter-core-4.2.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openoffice/juh/4.1.2/bbd1b7b49879b5ca34b50053a5929755bcab5063/juh-4.1.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openoffice/jurt/4.1.2/49fc3e3808c2a6c97831824794d3b1313c12e406/jurt-4.1.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openoffice/ridl/4.1.2/2b3f48a310c7bdc1526146c0e2bd97c4ce3b8b85/ridl-4.1.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openoffice/unoil/4.1.2/48921ffdfdf14f47d91d90c5e7c9ec6138941340/unoil-4.1.2.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.7.0/19f42c154ffc689f40a77613bc32caeb17d744e3/jackson-annotations-2.7.0.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.6/815893df5f31da2ece4040fe0a12fd44b577afaf/commons-io-2.6.jar" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.7/557edd918fd41f9260963583ebf5a61a43a6b423/commons-lang3-3.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/libs/jodconverter-core-3.0-alfresco-patched-20141024.jar" />
         </element>
       </element>
     </root>
