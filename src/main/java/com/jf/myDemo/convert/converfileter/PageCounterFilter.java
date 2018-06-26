@@ -17,7 +17,7 @@
  * limitations under the License.
  */
 
-package com.jf.myDemo.converfileter;
+package com.jf.myDemo.convert.converfileter;
 
 import com.sun.star.beans.XPropertySet;
 import com.sun.star.frame.XModel;

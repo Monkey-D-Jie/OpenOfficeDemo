@@ -17,24 +17,33 @@
           <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Gradle: org.jodconverter:jodconverter-local:4.2.0" />
-          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.6.2" />
-          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-core:2.6.2" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:4.3.14.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:4.3.14.RELEASE" />
           <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-web:2.6.2" />
-          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.6.2" />
-          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
-          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.7.3" />
-          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.7.3" />
           <element id="library" level="project" name="Gradle: org.jodconverter:jodconverter-core:4.2.0" />
           <element id="library" level="project" name="Gradle: org.openoffice:juh:4.1.2" />
           <element id="library" level="project" name="Gradle: org.openoffice:jurt:4.1.2" />
           <element id="library" level="project" name="Gradle: org.openoffice:ridl:4.1.2" />
           <element id="library" level="project" name="Gradle: org.openoffice:unoil:4.1.2" />
-          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.7.0" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.6.2" />
+          <element id="library" level="project" name="Gradle: org.jodconverter:jodconverter-local:4.2.0" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.7.3" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.7.3" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:4.3.14.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:4.3.14.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:4.3.14.RELEASE" />
           <element id="library" level="project" name="Gradle: commons-io:commons-io:2.6" />
           <element id="library" level="project" name="Gradle: org.apache.commons:commons-lang3:3.7" />
-          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.2" />
           <element id="file-copy" path="$PROJECT_DIR$/libs/jodconverter-core-3.0-alfresco-patched-20141024.jar" />
+          <element id="library" level="project" name="Gradle: commons-logging:commons-logging:1.2" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.8.2" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:4.3.14.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-core:2.6.2" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-slf4j-impl:2.6.2" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.7.0" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:4.3.14.RELEASE" />
+          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-test/4.3.14.RELEASE/1a7f6f51a263a3e09e94403653348b3864412c53/spring-test-4.3.14.RELEASE.jar" />
         </element>
       </element>
     </root>

@@ -15,6 +15,11 @@ ext {
 //    jodconverterVersion2 = '3.0-beta-3'
     /*jacksonVersion 数据转换成json的包*/
     jacksonVersion = '2.7.3'
+    /**
+     * Spring + SpringMVC
+     *
+     */
+    springVersion = '4.3.14.RELEASE'
 }
 repositories {
     mavenCentral()
@@ -29,14 +34,18 @@ dependencies {
             "org.apache.logging.log4j:log4j-web:$log4j2Version",
             "org.apache.logging.log4j:log4j-slf4j-impl:$log4j2Version",
             "org.slf4j:slf4j-api:$slf4jVersion",
-            // https://mvnrepository.com/artifact/org.artofsolving.jodconverter/jodconverter-core
 //            "org.artofsolving.jodconverter:jodconverter-core:$jodconverterVersion2"
             //加载本地的jar包
-            fileTree(dir:'libs',include:['*.jar']),
-            // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+            fileTree(dir: 'libs', include: ['*.jar']),
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
-            // https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind
-            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+            "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
+            //Spring +SpringMVC
+            "org.springframework:spring-context:$springVersion",
+            "org.springframework:spring-core:$springVersion",
+            "org.springframework:spring-beans: $springVersion",
+            "org.springframework:spring-web:$springVersion",
+            "org.springframework:spring-webmvc:$springVersion",
+            "org.springframework:spring-test:$springVersion"
 
     )
 }

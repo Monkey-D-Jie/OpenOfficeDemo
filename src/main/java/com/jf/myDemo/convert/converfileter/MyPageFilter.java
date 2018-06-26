@@ -1,4 +1,4 @@
-package com.jf.myDemo.converfileter;
+package com.jf.myDemo.convert.converfileter;
 
 import com.sun.star.datatransfer.XTransferable;
 import com.sun.star.datatransfer.XTransferableSupplier;

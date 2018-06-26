@@ -1,7 +1,7 @@
-package com.jf.myDemo.OpenOfficeDemo;
+package com.jf.mydemo.mufdTest.OpenOfficeDemo;
 
-import com.jf.myDemo.converterUtils.MyOpenOfficeConverter;
-import com.jf.myDemo.converterUtils.Pdf2Html.Pdf2htmlEXUtil;
+import com.jf.myDemo.convert.converterUtils.MyOpenOfficeConverter;
+import com.jf.myDemo.convert.converterUtils.Pdf2Html.Pdf2htmlEXUtil;
 import org.jodconverter.office.OfficeException;
 import org.junit.Test;
 
@@ -19,7 +19,7 @@ import java.util.zip.DataFormatException;
  *
  */
 
-public class ConverterTest {
+public class FileConverterTest {
 
 //    private String libreHtmlDir = "E:\\Users\\libreOffice\\2Html\\";
     private String libreHtmlDir = "E:\\Users\\libreOffice\\2Html";

@@ -1,7 +1,7 @@
-package com.jf.myDemo.converterUtils;
+package com.jf.myDemo.convert.converterUtils;
 
 import com.jf.myDemo.common.utilities.txt.WriteTxtKit;
-import com.jf.myDemo.converfileter.PageCounterFilter;
+import com.jf.myDemo.convert.converfileter.PageCounterFilter;
 import org.jodconverter.JodConverter;
 import org.jodconverter.LocalConverter;
 import org.jodconverter.filter.text.PageSelectorFilter;
